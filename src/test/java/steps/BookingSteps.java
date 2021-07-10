@@ -43,9 +43,9 @@ public class BookingSteps {
     }
 
     @Then("Hotel {string} rating is {string}")
-    public void hotelHostelUrbanRatingIs(String hotel, String rating) {
+    public void hotelRatingIs(String hotel, String ratingOfHotel) {
         hotelApartmentShouldBeOnTheSearchResultsPage(hotel);
-        String str = $(By.xpath(String.format(RATING_OF_HOTEL,hotel,rating))).getText();
-        Assert.assertEquals(str,rating);
+        String str = $(By.xpath(String.format(RATING_OF_HOTEL,hotel,ratingOfHotel))).getText();
+        Assert.assertEquals(str,ratingOfHotel);
     }
 }
